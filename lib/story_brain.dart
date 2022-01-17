@@ -68,18 +68,20 @@ class StoryBrain {
   void restart() {
     _storyNumber = 0;
   }
+
+  // bool buttonShouldBeVisible() {
+  //   //You could also just check if (_storyNumber < 3)
+  //   if (_storyNumber == 0 || _storyNumber == 1 || _storyNumber == 2) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
+  bool buttonShouldBeVisible() {
+    if (_storyNumber < 3) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
-
-
-
-//TODO: Step 23 - Use the storyNumber property inside getStory(), getChoice1() and getChoice2() so that it gets the updated story and choices rather than always just the first (0th) one.
-
-
-
-//TODO: Step 25 - Change the storyNumber property into a private property so that only story_brain.dart has access to it. You can do this by right clicking on the name (storyNumber) and selecting Refactor -> Rename to make the change across all the places where it's used.
-
-
-
-
-
-//TODO: Step 27 - Create a method called buttonShouldBeVisible() which checks to see if storyNumber is 0 or 1 or 2 (when both buttons should show choices) and return true if that is the case, else it should return false.
